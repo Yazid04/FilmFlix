@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #1A171E;
+}
+
+.stop-body-scroll{
+  overflow: hidden;
+}
+
+article.activeSlide{
+  opacity: 1;
+  transform: translateX(0);
+}
+article.lastSlide{
+  transform: translateX(-100%);
+}
+article.nextSlide{
+  transform: translateX(100%);
+}
