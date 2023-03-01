@@ -7,6 +7,7 @@ module.exports = {
       navbar: "#0D0D0F",
       bgWhite: "#ffffff",
       hoverbg: "#443d4d",
+      bgRed: '#E50712',
     },
     colors: {
       SecondaryTextClr: "#2C2B32",

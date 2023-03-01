@@ -21,7 +21,6 @@ const AppProvider = ({ children }) => {
       const {results} = data;
       setList(await results);
     } catch (error) {
-      console.log(error);
     }
   }
 

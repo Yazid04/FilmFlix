@@ -5,7 +5,6 @@ import { useGlobalContext } from '../context/context'
 
 export const ShowsPage = () => {
   const { list } = useGlobalContext();
-  console.log(list);
   return (
     <>
     <div className="hidden md:flex">

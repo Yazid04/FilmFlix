@@ -31,3 +31,18 @@ export default App;
 // 'md-lg': FROM >= "900px",
 // 'xl': FROM >= '1280px',
 // '2xl' FROM >=: '1536px',
+
+
+/*
+const { list } = useGlobalContext();
+{list.map((item) => {
+        const { title, poster_path } = item;
+        const posterSize = `w500/`
+        return (
+          <>
+          <div className="w-full h-full" key={Math.random() * 10000}>
+            <img src={`https://image.tmdb.org/t/p/${posterSize}/${poster_path || ''} `} alt='ckckck'/>
+          </div>
+          </>
+        );
+      })}*/

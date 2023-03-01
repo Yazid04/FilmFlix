@@ -1,22 +1,27 @@
 import React from "react";
 import { useHomeContext } from "./HomeContext";
 
+
 export const Trending = () => {
   const { trending, loading, handleToggle, toggle } = useHomeContext();
   function calculatePopularity(vote_average) {
       const toStr = vote_average.toString().replace(/\./g, "");
-      if (toStr[0] == 0 || toStr.length < 2) return "NR";
+      if (toStr[0] === 0 || toStr.length < 2) return "NR";
       if(toStr.length === 2) return Math.round(`${toStr[0]}${toStr[1]}`) + '%';
       return Math.round(`${toStr[0]}${toStr[1]}.${toStr[2]}`)+'%';
   }
 
   return (
     <>
-      <div className="py-8 px-5 bg-primary font-Montserrat mx-auto">
+    <main className="max-w-[85rem] mx-auto">
+      <div className="py-10 px-5 bg-primary mx-auto">
         <div className="flex items-center justify-center max-w-xl mx-auto md:mx-0 md:justify-start">
+          <div className="flex">
+          <div className="border-l-4 border-l-logoText bg-bgRed rounded-full w-[0.1x] h-10 mr-2"></div>
           <h1 className="font-bold text-3xl mr-2 text-PrimaryTextClr">
             Trending
           </h1>
+          </div>
           <div className="flex relative justify-between rounded-3xl w-4/5 overflow-hidden bg-bgWhite font-bold text-logoText max-w-xs">
             <div
               type="button"
@@ -99,20 +104,9 @@ export const Trending = () => {
           );
         })}
       </div>
+      </main>
     </>
   );
 };
 
-/*
-const { list } = useGlobalContext();
-{list.map((item) => {
-        const { title, poster_path } = item;
-        const posterSize = `w500/`
-        return (
-          <>
-          <div className="w-full h-full" key={Math.random() * 10000}>
-            <img src={`https://image.tmdb.org/t/p/${posterSize}/${poster_path || ''} `} alt='ckckck'/>
-          </div>
-          </>
-        );
-      })}*/
+

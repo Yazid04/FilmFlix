@@ -4,6 +4,7 @@ import { Hero } from "./Hero";
 import { Trending } from "./Trending";
 import {NowPlaying} from './NowPlaying'
 import { HomeProvider } from "./HomeContext";
+import { TvPopular } from "./TvPopular";
 import heroBg from '../assets/heroBg.jpg'
 
 
@@ -21,6 +22,7 @@ export const HomePage = () => {
               className="absolute z-0 inset-0 h-full w-full object-cover object-bottom opacity-30"
               src={heroBg}
               alt="hero background"
+              loading="lazy"
             />
             <div className="absolute w-[22rem] mx-auto top-[50%] text-center left-2/4 -translate-x-2/4 -translate-y-[50%] text-PrimaryTextClr font-Montserrat md:w-[45rem] md:max-w-6xl md:top-[35%] md:-translate-y-[35%]">
               <div className="relative w-full h-full">
@@ -38,8 +40,7 @@ export const HomePage = () => {
         </div>
         <NowPlaying />
         <Trending />
-        <h2>Tv_on_Air</h2>
-        <h2>Coming soon to theaters</h2>
+        <TvPopular />
       </HomeProvider>
     </>
   );
