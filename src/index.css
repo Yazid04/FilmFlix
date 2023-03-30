@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *{
   padding: 0;
   margin: 0;
@@ -10,6 +11,7 @@
 body {
   box-sizing: border-box;
   background-color: #1A171E;
+  overflow-x: hidden;
 }
 
 .stop-body-scroll{
@@ -25,4 +27,30 @@ article.lastSlide{
 }
 article.nextSlide{
   transform: translateX(100%);
+}
+
+
+.ps__thumb-x {
+  background-color: #e6e6e6 !important;
+  touch-action: none !important;
+}
+
+.ps__rail-x{
+  background-color: black !important;
+  touch-action: none !important;
+}
+
+.text-reveal {
+  animation: text-reveal 2s forwards;
+}
+
+@keyframes text-reveal {
+  0% {
+    opacity: 0;
+    margin-top: 0px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 30px;
+  }
 }

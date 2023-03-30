@@ -1,21 +1,18 @@
 import React from "react";
-import { MoviesPage } from "./components/Movies/MoviesPage";
-import { HomePage } from "./components/Home/HomePage";
-import { DiscussionPage } from "./components/Discuss/DiscussionPage";
-import { ShowsPage } from "./components/Shows/ShowsPage";
-import { ErrorPage } from "./components/Error/ErrorPage";
+import { HomePage } from "./components/Pages/home/HomePage";
+import { ErrorPage } from "./components/Pages/error/ErrorPage";
+import { DetailedPage } from './components/Pages/detailed/DetailedPage'
+import { SearchPage } from "./components/Pages/search/SearchPage";
 import { Route, Routes } from "react-router-dom";
 
-// const API_KEY = 'ae47695d0d81bdec0747a63eb0a9b7b6';
 
 function App() {
   return (
     <>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/Shows" element={<ShowsPage />} />
-        <Route path="/Movies" element={<MoviesPage />} />
-        <Route path="/Discuss" element={<DiscussionPage />} />
+        <Route path="/movie/:id" element={<DetailedPage />} />
+        <Route path="/Search" element={<SearchPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
@@ -32,17 +29,3 @@ export default App;
 // 'xl': FROM >= '1280px',
 // '2xl' FROM >=: '1536px',
 
-
-/*
-const { list } = useGlobalContext();
-{list.map((item) => {
-        const { title, poster_path } = item;
-        const posterSize = `w500/`
-        return (
-          <>
-          <div className="w-full h-full" key={Math.random() * 10000}>
-            <img src={`https://image.tmdb.org/t/p/${posterSize}/${poster_path || ''} `} alt='ckckck'/>
-          </div>
-          </>
-        );
-      })}*/

@@ -1,5 +1,5 @@
 {
-  "name": "filmmer",
+  "name": "FilmFlix",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-perfect-scrollbar": "^1.5.8",
     "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "tailwind": "^4.0.0",
