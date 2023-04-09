@@ -4,7 +4,8 @@ import { IoClose } from "react-icons/io5";
 import { SearchBar } from "./SearchBar";
 import { Sidebar } from "./Sidebar";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { useGlobalContext, } from "../context/context";
+import { useGlobalContext } from "../context/context";
+import { Link } from "react-router-dom";
 
 
 export const Navbar = () => {
@@ -59,12 +60,14 @@ ${
             >
               <RxHamburgerMenu />
             </div>
+            <Link to='/'> 
             <h1
               className={`text-xl font-bold bg-red font-Montserrat ${theme === 'dark' ? 'text-PrimaryTextClr' : 'text-[black]'} px-2 rounded 
-          ${isSideBarOpen ? "z-0" : "z-20"}`}
-            >
+              ${isSideBarOpen ? "z-0" : "z-20"}`}
+              >
               {logoText}
             </h1>
+            </Link>
           </main>
 
           {/*search input -conditionally rendered- for larger screens*/}
@@ -72,7 +75,7 @@ ${
             <SearchBar />
           </section>
 
-          {/*change theme*/}
+          {/*change theme option*/}
           <div className="flex font-bold items-center">
             <button
               onClick={(e) => handleModeToggle(e)}

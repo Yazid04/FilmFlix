@@ -1,9 +1,9 @@
 import React, {useId} from 'react'
 import {RiFacebookCircleFill, RiCopyrightLine} from 'react-icons/ri'
 import {AiFillTwitterCircle, AiFillInstagram, AiFillGithub, AiFillGoogleCircle} from 'react-icons/ai'
-import logo from '../../assets/logo.png'
-import logoLight from '../../assets/logoLight.png'
-import { useGlobalContext } from '../../context/context'
+import logo from '../assets/logo.png'
+import logoLight from '../assets/logoLight.png'
+import { useGlobalContext } from '../context/context'
 
 
 export const Footer = () => {
@@ -32,8 +32,8 @@ export const Footer = () => {
       },
     ]
   return (
-    <section className={`w-full h-min py-5 ${theme === 'dark' ? 'bg-navbar text-PrimaryTextClr' : 'bg-primaryLight text-primaryTextLight'} max-w-[85rem] mx-auto mt-10 grid place-content-center`}>
-       <div className='w-min h-min p-3'>
+    <section className={`w-full h-min py-5 ${theme === 'dark' ? 'bg-navbar text-PrimaryTextClr' : 'bg-cardsBg text-PrimaryTextClr'} max-w-[85rem] mx-auto mt-10 grid place-content-center`}>
+       <div className='w-min h-min px-3'>
          <div className='flex items-center gap-x-3 min-w-[18rem] justify-around my-4'>
             {socialMediaIcons.map(({icon, id}) => {
               return (
@@ -51,8 +51,7 @@ export const Footer = () => {
              <li className='list-none'><button>FAQ</button></li>
          </div>
          <div className={`h-24 mb-4 md:w-72 md:h-32`}>
-           {theme === 'dark' ? <img className='w-full h-full' src={logo} alt='FilmFlix logo' />
-           : <img className='w-full h-full' src={logoLight} alt='FilmFlix logo' />}
+           <img className='w-full h-full' src={theme === 'dark' ? logo : logoLight} alt='FilmFlix logo' />
          </div>
          </div>
          <div className='flex items-center justify-center h-10'>

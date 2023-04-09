@@ -1,10 +1,18 @@
-import React from 'react'
-import {useParams} from 'react-router-dom'
-//https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
+import React from "react";
+import { MovieDetailPageProvider } from "./detailsPageContext";
+import {Content} from './Content'
+import { useGlobalContext } from "../../context/context";
 
 export const DetailedPage = () => {
-    const {id} = useParams();
+
+  const {theme} = useGlobalContext();
+
   return (
-    <div className='text-PrimaryTextClr'>DetailedPage for: {id}</div>
-  )
-}
+    <>
+      <MovieDetailPageProvider>
+        <Content theme={theme} />
+      </MovieDetailPageProvider>
+    </>
+  );
+};
+

@@ -94,7 +94,7 @@ export const NowPlaying = () => {
                           } `}
                           alt={title}
                         />
-                        <Link to={`movie/${id}`}>
+                        <Link to={`details/${id}`}>
                           <div className={`absolute cursor-pointer bottom-0 left-2/4 -translate-x-2/4 w-full ${theme === 'dark' ? 'bg-navbar' : 'bg-primaryLight' } p-4 py-3 `}>
                             <div className="flex justify-center items-center">
                               <h2 className="mr-5 font-bold">{title}</h2>
@@ -138,7 +138,7 @@ export const NowPlaying = () => {
                       className={`w-full flex flex-1 shadow-4xl overflow-hidden  ${theme === 'dark' ? 'bg-navbar text-PrimaryTextClr' : 'bg-primaryLight text-primaryTextLight'} rounded-lg`}
                     >
                       <div className="flex-[35%]">
-                        <Link to={`movie/${id}`}>
+                        <Link to={`details/${id}`}>
                           <img
                             className="object-cover h-full w-full"
                             src={`https://image.tmdb.org/t/p/w400/${
@@ -159,7 +159,7 @@ export const NowPlaying = () => {
                         </div>
                         <div className="my-4">
                           {cols === 4 && (
-                            <Link to={`/movie/${id}`}>
+                            <Link to={`/details/${id}`}>
                               <div className="flex items-center px-4 text-xs w-40 h-7 lg:text-sm">
                                 <p className="underline">Read More</p>
                                 <div className="h-full grid place-content-center ml-2 text-md">

@@ -4,6 +4,7 @@ import PerfectScrollbar from "react-perfect-scrollbar";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context/context";
+import GetVotes from "./GetVotes"; 
 
 export const useHorizontalCardList = (list, toRate) => {
   const POSTER_SIZE = "w500/";
@@ -16,14 +17,6 @@ export const useHorizontalCardList = (list, toRate) => {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
-
-  function calculatePopularity(vote_average) {
-    const toStr = vote_average.toString().replace(/\./g, "");
-    if (toStr[0] === 0) return "NR";
-    if (toStr.length === 1) return `${toStr[0]}0%`;
-    if (toStr.length === 2) return Math.round(`${toStr[0]}${toStr[1]}`) + "%";
-    return Math.round(`${toStr[0]}${toStr[1]}.${toStr[2]}`) + "%";
-  }
   
   return (
     <>
@@ -53,7 +46,7 @@ export const useHorizontalCardList = (list, toRate) => {
             className={`min-w-[12rem] h-[27rem] mx-2 ${theme === 'dark' ? 'bg-navbar' : 'bg-cardsBg shadow-4xl'} rounded-md hover:transition-all hover:shadow-3x`}
             key={id}>
             {/*Movie image && rating */}
-            <Link to={`/movie/${id}`}>
+            <Link to={`/details/${id}`}>
               <div className="block relative h-[17rem] w-full">
                 <img
                   src={`https://image.tmdb.org/t/p/${POSTER_SIZE}/${
@@ -64,7 +57,7 @@ export const useHorizontalCardList = (list, toRate) => {
                 />
                 {toRate && (
                   <div className={`absolute -bottom-4 left-3 h-8 w-8 rounded-3xl grid place-content-center text-primaryTextLight ${theme === 'dark' ? 'bg-bgWhite' : 'bg-primaryLight '} text-xs font-extrabold`}>
-                    {calculatePopularity(vote_average)}
+                    {GetVotes(vote_average)}
                   </div>
                 )}
               </div>
@@ -77,7 +70,7 @@ export const useHorizontalCardList = (list, toRate) => {
               <p className="text-xs opacity-80">
                 {release_date || first_air_date}
               </p>
-              <Link to={`/movie/${id}`}>
+              <Link to={`/details/${id}`}>
                 <div className="flex items-center gap-x-3">
                   <p className="underline">Read More </p>
                   <BsBoxArrowUpRight />

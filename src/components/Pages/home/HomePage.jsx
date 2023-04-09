@@ -7,12 +7,11 @@ import { HomeProvider } from "./HomeContext";
 import { FanFavourites } from './FanFavourites'
 import { UpComing } from "./UpComing"; 
 import heroBg from '../../assets/heroBg.png';
-import { Footer } from "./Footer";
+import { Footer } from "../../shared/Footer";
 import { useGlobalContext } from "../../context/context";
-import '../../../index.css'
+import '../../../index.css';
 
 export const HomePage = () => {
-  const bodyElm = document.querySelector("body");
   const {logoText, theme} = useGlobalContext();
   const headerRef = useRef();
 
@@ -22,9 +21,7 @@ export const HomePage = () => {
     }, 500);
   }, []);
 
-  useEffect(() => {
-    bodyElm.style.backgroundColor = theme === 'dark' ? '' : '#F0FFF0';
-  }, [theme, bodyElm.style]);
+
 
 
   return (
@@ -41,7 +38,7 @@ export const HomePage = () => {
               className="absolute z-0 inset-0 h-full w-full object-cover object-bottom opacity-30"
               src={heroBg}
               alt="hero background"
-              loading="lazy"
+              
             />
             <div ref={headerRef} className="absolute text-reveal w-[22rem] mx-auto text-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-PrimaryTextClr font-Montserrat md:w-[45rem] md:max-w-6xl md:top-[35%] md:-translate-y-[35%]">
               <div className="relative w-full h-full">

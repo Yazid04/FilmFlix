@@ -33,6 +33,7 @@ module.exports = {
     },
     fontFamily: {
       Montserrat: [`Montserrat, sans-serif`],
+      NotoSans: [`Noto Sans, sans-serif`],
     },
     girdTemplateColumns: {
       'custom': "repeat(5, minmax(0, 500px))",
