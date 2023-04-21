@@ -17,10 +17,10 @@ export const useHorizontalCardList = (list, toRate) => {
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
-  
+   
   return (
     <>
-    <PerfectScrollbar className="h-min overflow-hidden mx-auto flex pb-6">
+    <PerfectScrollbar className="h-min overflow-hidden mx-auto flex pb-6 font-sourceSansPro">
       {list?.map((card) => {
         const {
           title,
@@ -28,8 +28,10 @@ export const useHorizontalCardList = (list, toRate) => {
           name,
           vote_average,
           id,
+          media_type,
           first_air_date,
           release_date,
+          status,
         } = card;
         if(isLoading){
           return (
@@ -46,7 +48,7 @@ export const useHorizontalCardList = (list, toRate) => {
             className={`min-w-[12rem] h-[27rem] mx-2 ${theme === 'dark' ? 'bg-navbar' : 'bg-cardsBg shadow-4xl'} rounded-md hover:transition-all hover:shadow-3x`}
             key={id}>
             {/*Movie image && rating */}
-            <Link to={`/details/${id}`}>
+            <Link to={`/details/${media_type ? media_type : status ? 'tv' : 'movie'}/${id}`}>
               <div className="block relative h-[17rem] w-full">
                 <img
                   src={`https://image.tmdb.org/t/p/${POSTER_SIZE}/${
@@ -64,13 +66,13 @@ export const useHorizontalCardList = (list, toRate) => {
             </Link>
             {/*Movie details */}
             <div className={`mt-6 ml-3 h-[6rem] flex flex-col justify-between text-PrimaryTextClr`}>
-              <h3 className='text-sm font-bold pr-2'>
+              <h3 className='font-bold pr-2 text-md'>
                 {title || name}
               </h3>
               <p className="text-xs opacity-80">
                 {release_date || first_air_date}
               </p>
-              <Link to={`/details/${id}`}>
+              <Link to={`/details/${media_type ? media_type : status ? 'tv' : 'movie'}/${id}`}>
                 <div className="flex items-center gap-x-3">
                   <p className="underline">Read More </p>
                   <BsBoxArrowUpRight />
@@ -86,4 +88,3 @@ export const useHorizontalCardList = (list, toRate) => {
   </>
   );
 };
-

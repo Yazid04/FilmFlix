@@ -1,12 +1,12 @@
 import React from "react";
-import { HomePage } from "./components/Pages/home/HomePage";
-import { ErrorPage } from "./components/Pages/error/ErrorPage";
+import { Route, Routes } from "react-router-dom";
 import { DetailedPage } from './components/Pages/detailed/DetailedPage'
 import { SearchPage } from "./components/Pages/search/SearchPage";
-import { Route, Routes } from "react-router-dom";
 import { useGlobalContext } from "./components/context/context";
+import { ErrorPage } from "./components/Pages/error/ErrorPage";
+import { HomePage } from "./components/Pages/home/HomePage";
 
-
+// warnings, better comments, improve README.md
 function AppWrapper() {
   const { theme } = useGlobalContext();
   return (
@@ -20,14 +20,13 @@ function AppWrapper() {
 }
 
 
-
 function App() {
   return (
     <>
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/details/:id" element={<DetailedPage />} />
-        <Route path="/Search" element={<SearchPage />} />
+        <Route path="/details/:media_type/:id" element={<DetailedPage />} />
+        <Route path="/search" element={<SearchPage />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
@@ -35,12 +34,3 @@ function App() {
 }
 
 export default AppWrapper;
-
-
-// 'sm': FROM >= '640px'
-// 'md': FROM >= '768px',
-// 'lg': FROM >= '1024px',
-// 'md-lg': FROM >= "900px",
-// 'xl': FROM >= '1280px',
-// '2xl' FROM >=: '1536px',
-// REACT_APP_TMDB_API_KEY ='ae47695d0d81bdec0747a63eb0a9b7b6'

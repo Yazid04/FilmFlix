@@ -32,7 +32,7 @@ export const Footer = () => {
       },
     ]
   return (
-    <section className={`w-full h-min py-5 ${theme === 'dark' ? 'bg-navbar text-PrimaryTextClr' : 'bg-cardsBg text-PrimaryTextClr'} max-w-[85rem] mx-auto mt-10 grid place-content-center`}>
+    <section className={`w-full h-min font-sourceSansPro py-5 ${theme === 'dark' ? 'bg-navbar text-PrimaryTextClr' : 'bg-cardsBg text-PrimaryTextClr'} max-w-[85rem] mx-auto mt-10 grid place-content-center`}>
        <div className='w-min h-min px-3'>
          <div className='flex items-center gap-x-3 min-w-[18rem] justify-around my-4'>
             {socialMediaIcons.map(({icon, id}) => {

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const useFetch = (url) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = React.useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   
   useEffect(() => {
@@ -12,13 +12,16 @@ const useFetch = (url) => {
         setIsLoading(true);
         const response = await fetch(url);
         if(!response.ok){
+          setError(true);
+          setIsLoading(false);
           throw new Error('Network response was not ok');
         }
         const { results } = await response.json();
         setData(await results);
         setIsLoading(false);
       } catch (error) {
-        setError(error);
+        setError(true);
+        console.log('error occured while fetching, using catch (try/catch) : ' + error);
         setIsLoading(false);
       }
     };

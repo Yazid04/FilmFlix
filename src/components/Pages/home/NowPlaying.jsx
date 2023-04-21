@@ -87,14 +87,16 @@ export const NowPlaying = () => {
                         key={id}
                         className={`${position} absolute transition-all duration-500 top-0 left-0 w-full h-full ${theme === 'dark' ? 'text-PrimaryTextClr' : 'text-primaryTextLight'}`}
                       >
+                        <Link to={`details/movie/${id}`}>
                         <img
                           className="w-full h-full object-cover"
                           src={`https://image.tmdb.org/t/p/w500/${
                             poster_path || ""
                           } `}
                           alt={title}
-                        />
-                        <Link to={`details/${id}`}>
+                          />
+                        </Link>
+                        <Link to={`details/movie/${id}`}>
                           <div className={`absolute cursor-pointer bottom-0 left-2/4 -translate-x-2/4 w-full ${theme === 'dark' ? 'bg-navbar' : 'bg-primaryLight' } p-4 py-3 `}>
                             <div className="flex justify-center items-center">
                               <h2 className="mr-5 font-bold">{title}</h2>
@@ -128,7 +130,7 @@ export const NowPlaying = () => {
             <div className={`h-full w-80 hidden md:block lg:w-[40rem] xl:w-[50rem] `}>
               {useSectionHeader('Similar Movies')}
               <div
-                className={`h-[31.7rem] pb-5 w-80 gap-4 overflow-hidden md:grid md:grid-cols-1 md:grid-rows-3 lg:grid lg:w-[40rem] lg:grid-cols-2 lg:grid-rows-2 xl:w-[50rem]`}
+                className={`h-[31.7rem] py-5 pr-2 w-80 gap-4 overflow-hidden md:grid md:grid-cols-1 md:grid-rows-3 lg:grid lg:w-[40rem] lg:grid-cols-2 lg:grid-rows-2 xl:w-[50rem]`}
               >
                 {similarMovies?.slice(0, cols)?.map((movie) => {
                   const { id, name, overview, title, poster_path } = movie;
@@ -138,7 +140,7 @@ export const NowPlaying = () => {
                       className={`w-full flex flex-1 shadow-4xl overflow-hidden  ${theme === 'dark' ? 'bg-navbar text-PrimaryTextClr' : 'bg-primaryLight text-primaryTextLight'} rounded-lg`}
                     >
                       <div className="flex-[35%]">
-                        <Link to={`details/${id}`}>
+                        <Link to={`details/movie/${id}`}>
                           <img
                             className="object-cover h-full w-full"
                             src={`https://image.tmdb.org/t/p/w400/${
@@ -159,7 +161,7 @@ export const NowPlaying = () => {
                         </div>
                         <div className="my-4">
                           {cols === 4 && (
-                            <Link to={`/details/${id}`}>
+                            <Link to={`/details/movie/${id}`}>
                               <div className="flex items-center px-4 text-xs w-40 h-7 lg:text-sm">
                                 <p className="underline">Read More</p>
                                 <div className="h-full grid place-content-center ml-2 text-md">

@@ -1,9 +1,8 @@
 import React, {useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { IoClose } from "react-icons/io5";
-import { SearchBar } from "./SearchBar";
+import { IoClose, } from "react-icons/io5";
 import { Sidebar } from "./Sidebar";
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaArrowRight } from "react-icons/fa";
 import { useGlobalContext } from "../context/context";
 import { Link } from "react-router-dom";
 
@@ -15,9 +14,9 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className={`fixed top-0 w-full z-30 shadow-customShadow`}>
+      <div className={`fixed top-0 w-full z-30 shadow-customShadow font-sourceSansPro`}>
         <section
-          className={`${theme === 'dark' ? 'bg-navbar text-logoText' : 'bg-primaryLight text-primaryTextLight'} relative flex justify-between md-lg:justify-between py-5 px-7 max-w-[85rem] mx-auto`}
+          className={`${theme === 'dark' ? 'bg-navbar text-logoText' : 'bg-primaryLight text-primaryTextLight'} font-sourceSansPro relative flex justify-between md-lg:justify-between py-5 px-7 max-w-[85rem] mx-auto`}
         >
           {/*background overlay*/}
           <div
@@ -55,25 +54,37 @@ ${
           {/*logo*/}
           <main className={`flex items-center`}>
             <div
-              className={`text-2xl mr-5 cursor-pointer`}
+              className={`text-2xl mr-5 cursor-pointer ${theme === 'dark' ? 'text-PrimaryTextClr' : 'text-primaryTextLight'} font-bold`}
               onClick={() => setIsSideBarOpen(!isSideBarOpen)}
             >
               <RxHamburgerMenu />
             </div>
-            <Link to='/'> 
+            <Link to={`/`}> 
             <h1
-              className={`text-xl font-bold bg-red font-Montserrat ${theme === 'dark' ? 'text-PrimaryTextClr' : 'text-[black]'} px-2 rounded 
+              className={`text-xl font-bold bg-red ${theme === 'dark' ? 'text-logoText' : 'text-primaryTextLight'} px-2 rounded 
               ${isSideBarOpen ? "z-0" : "z-20"}`}
               >
               {logoText}
             </h1>
             </Link>
+            <div className={`gap-8 ml-10 font-bold ${theme === 'dark' ? 'text-PrimaryTextClr' : 'text-primaryTextLight'} hidden md:flex`}>
+              <Link to={`/search`}>
+              <p>TV Shows</p>
+              </Link>
+              <Link to={`/search`}>
+              <p>Movies</p>
+              </Link>
+              <Link to={`/search`}>
+               <p>Search</p>
+              </Link>
+            </div>
+            <div className="flex items-center text-PrimaryTextClr md:hidden">
+              <Link to={`/search`} className={`ml-5 font-bold flex gap-2 items-center cursor-pointer ${theme === 'dark' ? 'text-PrimaryTextClr' : 'text-primaryTextLight'}`}>
+               <p>Search</p>
+              <FaArrowRight />
+              </Link>
+            </div>
           </main>
-
-          {/*search input -conditionally rendered- for larger screens*/}
-          <section className={`hidden w-2/4 z-10 md-lg:block`}>
-            <SearchBar />
-          </section>
 
           {/*change theme option*/}
           <div className="flex font-bold items-center">

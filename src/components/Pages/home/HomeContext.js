@@ -1,8 +1,8 @@
 import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
-
 const HomeContext = createContext();
 
 const HomeProvider = ({ children }) => {
+  const API_KEY = process.env.REACT_APP_TMDB_API_KEY
   const [loading, setLoading] = useState(true);
   const [trending, setTrending] = useState(null);
   const [nowPlaying, setNowPlaying] = useState(null);
@@ -11,7 +11,6 @@ const HomeProvider = ({ children }) => {
     toggleToday: false,
     toggleWeekly: true,
   });
-  const API_KEY = process.env.REACT_APP_TMDB_API_KEY
   
 
   function handleToggle(e) {
@@ -58,10 +57,9 @@ const HomeProvider = ({ children }) => {
       return setNowPlaying(await results);
     }
     catch(error){
-      console.error('Error fetching trending movies:', error);
+      console.error('Error fetching Now playing movies:', error);
     }
   }, [ENDPOINT_NOWPLAYING]);
-
 
 
 
