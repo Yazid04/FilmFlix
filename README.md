@@ -34,31 +34,31 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ```  
   2. Navigate to the repository's directory on your local machine:
   ```  
-  cd FilmFlix    
+   cd FilmFlix    
   ```  
   3. Install the dependencies using npm or yarn:   
   ```  
-  npm install  
+   npm install  
   ```  
    or  
    ```  
-   yarn install  
+    yarn install  
    ```  
 
   ## Configuration : 
   4. Create a .env file in the root of your repository with the following content:
   ```
-    REACT_APP_TMDB_API_KEY=YOUR_API_KEY
+   REACT_APP_TMDB_API_KEY=YOUR_API_KEY
   ```
   Note: Replace YOUR_API_KEY with your actual API key, if your app requires any external APIs.
   
   ## Running the App
   5. Start the React app locally:
   ```
-  npm start
+   npm start
   ```
   or 
   ```
-  yarn start
+   yarn start
   ```
   6. Open your web browser and go to http://localhost:3000 to see the app running locally.
