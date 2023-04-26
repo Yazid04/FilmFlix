@@ -9,9 +9,9 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   #### Fully Responsive: The website is optimized for use on all devices, from desktop to mobile.
   ####  Multiple Pages: The website has a landing page, a page for viewing details about a single movie or TV show, and a search page with advanced filtering options.   
   ####  Security: The website uses best security practices to ensure user data is protected.  
-  ####  Folder Structure: The website has a clear and organized folder structure for easy maintenance and scalability.  
+  ####  Folder Structure: FilmFlix has a clear and organized folder structure for easy maintenance and scalability.  
   ####  Reusable Components: Custom reusable components have been created to optimize code and make it easier to build new features.  
-  #### TailwindCSS: The website uses the popular TailwindCSS framework for styling and complex grid layouts.  
+  #### TailwindCSS: This project uses the popular TailwindCSS framework for styling and complex grid layouts.  
   ####  Context API: Multiple contexts are used throughout the project instead of a single global context, to efficiently manage states.  
   ####  Dark/Light Theme: Users can toggle between a dark and light theme to suit their preferences.  
   ####  Utility Functions: Multiple utility functions such as useFetch() have been implemented to optimize the code and improve performance.  
@@ -19,7 +19,6 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
    
    
   ## Technologies Used :
-  - [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="React Logo" width="30" height="15"> React](https://reactjs.org/)
   * React js
   * TailwindCSS
   * Context API
@@ -63,3 +62,5 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
    yarn start
   ```
   6. Open your web browser and go to http://localhost:3000 to see the app running locally.
+
+  **That's it! You have successfully installed and set up the React app locally**
