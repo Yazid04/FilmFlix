@@ -25,3 +25,22 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   * Node js
   * TMDB API
   * Express js
+
+
+  ## Installation :
+  1. Clone the repository to your local machine using the following command:  
+  ```  
+  git clone https://github.com/Yazid04/FilmFlix.git
+  ```  
+  1.Navigate to the repository's directory on your local machine:
+  ```  
+  cd FilmFlix    
+  ```  
+  1.Install the dependencies using npm or yarn:   
+  ```  
+  npm install  
+  ```  
+   or  
+   ```  
+   yarn install  
+   ```  
