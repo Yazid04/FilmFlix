@@ -28,7 +28,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
 
 
   ## Installation :
-  1. Clone the repository to your local machine using the following command:  
+  1.Clone the repository to your local machine using the following command:  
   ```  
   git clone https://github.com/Yazid04/FilmFlix.git
   ```  
