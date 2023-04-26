@@ -6,7 +6,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
    
    
   ## Features : 
-  #### Fully Responsive: *The website is optimized for use on all devices, from desktop to mobile.*
+  #### Fully Responsive: The website is optimized for use on all devices, from desktop to mobile.
   ####  Multiple Pages: The website has a landing page, a page for viewing details about a single movie or TV show, and a search page with advanced filtering options.   
   ####  Security: The website uses best security practices to ensure user data is protected.  
   ####  Folder Structure: FilmFlix has a clear and organized folder structure for easy maintenance and scalability.  
