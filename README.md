@@ -45,8 +45,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
    yarn install  
    ```  
 
-  ## Configuration :
-4. Create a .env file in the root of your repository with the following content:
+  ## Configuration : 4. Create a .env file in the root of your repository with the following content:
   ```
   REACT_APP_TMDB_API_KEY=YOUR_API_KEY
   ```
