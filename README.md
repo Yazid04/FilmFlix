@@ -21,7 +21,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ## Technologies Used :
   * React js
   * TailwindCSS
-  * Context Api
+  * CONTEXT API
   * Node js
   * TMDB API
   * Express js
