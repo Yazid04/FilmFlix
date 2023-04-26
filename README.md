@@ -19,7 +19,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
    
    
   ## Technologies Used :
-  * - [React ![React Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png alt="React Logo" width="30" height="30")](https://reactjs.org/)
+  - [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" alt="React Logo" width="30" height="30"> React](https://reactjs.org/)
   * React js
   * TailwindCSS
   * Context API
