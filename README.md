@@ -1,9 +1,9 @@
 # FilmFlix - Your Go-To Movie and TV Show Search Companion
 
-## Description: 
+## Description : 
 FilmFlix is a responsive React app that allows users to search for movies and TV shows, filter by genre and/or media type, view details about specific titles, toggle between a dark and light theme, and more! The website has been designed with security and best practices in mind, and features a professional folder structure, custom reusable components, and optimized code for efficient performance.    
 
-  ## Features: 
+  ## Features : 
   #### Fully Responsive: The website is optimized for use on all devices, from desktop to mobile.
   ####  Multiple Pages: The website has a landing page, a page for viewing details about a single movie or TV show, and a search page with advanced filtering options.   
   ####  Security: The website uses best security practices to ensure user data is protected.  
@@ -14,4 +14,9 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ####  Dark/Light Theme: Users can toggle between a dark and light theme to suit their preferences.  
   ####  Utility Functions: Multiple utility functions such as useFetch() have been implemented to optimize the code and improve performance.  
   
-  NOTE: This project is not done yet and is incomplete.   
+  ## Technologies Used :
+  #### React js
+  #### TailwindCSS
+  #### Context Api
+  #### Node js
+  #### Express js
