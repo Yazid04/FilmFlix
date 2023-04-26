@@ -40,7 +40,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ```  
    npm install  
   ```  
-   or  
+   OR  
    ```  
     yarn install  
    ```  
@@ -57,7 +57,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ```
    npm start
   ```
-      OR
+   OR
   ```
    yarn start
   ```
