@@ -50,7 +50,7 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ```
    REACT_APP_TMDB_API_KEY=YOUR_API_KEY
   ```
-  Note: Replace YOUR_API_KEY with your actual API key, if your app requires any external APIs.
+  Note: Replace YOUR_API_KEY with your actual API key, which is you can get from the TMDB website https://www.themoviedb.org/documentation/api
   
   ## Running the App
   5. Start the React app locally:
