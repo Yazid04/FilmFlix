@@ -13,8 +13,8 @@ const MovieDetailPageProvider = ({ children }) => {
   const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
   
   
-  const videoEndpoint =        `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${API_KEY}&language=en-US`   
-  const movieDetailEndpoint =  `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${API_KEY}&language=en-US`;
+  const videoEndpoint = `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${API_KEY}&language=en-US`   
+  const movieDetailEndpoint = `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${API_KEY}&language=en-US`;
   const movieCreditsEndpoint = `https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=${API_KEY}&language=en-US`
 
 

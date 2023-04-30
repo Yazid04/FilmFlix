@@ -6,7 +6,6 @@ import { useGlobalContext } from "./components/context/context";
 import { ErrorPage } from "./components/Pages/error/ErrorPage";
 import { HomePage } from "./components/Pages/home/HomePage";
 
-// warnings, better comments, improve README.md
 function AppWrapper() {
   const { theme } = useGlobalContext();
   return (

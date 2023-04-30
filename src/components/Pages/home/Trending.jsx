@@ -29,7 +29,7 @@ export const Trending = () => {
               This Week
             </div>
             <div
-              className={`text-sm absolute grid place-content-center text-PrimaryTextClr ${theme === 'dark' ? '' : 'bg-[#4caf50]'} top-0 
+              className={`text-sm absolute grid place-content-center ${theme === 'dark' ? 'text-PrimaryTextClr' : 'bg-[#4caf50] text-primaryTextLight'} top-0 
               ${
                 toggle.toggleWeekly ? "left-2/4 right-0" : "left-0 right-2/4"
               } bottom-0 rounded-3xl transition-all duration-300 ${theme === 'dark' ? 'bg-[red]' : 'bg-primaryLight' }`}>
