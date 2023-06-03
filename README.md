@@ -63,5 +63,5 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ```
   6. Open your web browser and go to http://localhost:3000 to see the app running locally.
 
-  ***That's it! You have successfully installed and set up FilmFlix locally.***
+  ***That's it! You have successfully installed and set up FilmFlix locally.***  
   *** Made with ❤ by @Yazid04. ***
