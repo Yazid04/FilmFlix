@@ -16,6 +16,12 @@ FilmFlix is a responsive React app that allows users to search for movies and TV
   ####  Dark/Light Theme: Users can toggle between a dark and light theme to suit their preferences.  
   ####  Utility Functions: Multiple utility functions such as useFetch() have been implemented to optimize the code and improve performance.  
    
+  
+  
+  ![FilmFlix images](./src/components/assets/screenShot1.png)
+  ![FilmFlix images](./src/components/assets/screenShot2.png)
+  ![FilmFlix images](./src/components/assets/screenShot3.png)
+   
    
    
   ## Technologies Used :
